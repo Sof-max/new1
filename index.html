@@ -8,6 +8,10 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="intel.js">
   <link rel="stylesheet" href="images">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
 
   <title>Document</title>
 </head>
@@ -73,14 +77,31 @@
 
   <img style="width: 100%;" src="images/доставка.jpg" alt="">
 
-  <div>
 
 
-  </div>
+  <!-- Slider main container -->
+  <div class="swiper-container ">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
 
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination swiper-pagination-bullets swiper-pagination-clickable">
+      <span class="swiper-pagination-bullet"><b>OUTER</b><span class="liner"></span></span>
+      <span class="swiper-pagination-bullet"><b>OUTER</b><span class="liner"></span></span>
+      <span class="swiper-pagination-bullet"><b>OUTER</b><span class="liner"></span></span>
+    </div>
 
+    <!-- If we need navigation buttons -->
 
 
+    <!-- If we need scrollbar -->
+    <div class="swiper-slide" data-swiper-autoplay="2000">
+    </div>
 
 
 
@@ -150,40 +171,67 @@
 
 
 
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
+    <script>
+      const swiper = new Swiper('.swiper-container', {
+        // Optional parameters
 
-
-
-
-
-
-
-
-  <script>
-    function w3_open() {
-      document.getElementById("mySidebar").style.display = "block";
-      document.getElementById("myOverlay").style.display = "block";
-    } function w3_close() {
-      document.getElementById("mySidebar").style.display = "none";
-      document.getElementById("myOverlay").style.display = "none";
-    } </script>
-
-  <script>
-    var myIndex = 0;
-    carousel();
-
-    function carousel() {
-      var i;
-      var x = document.getElementsByClassName("mySlides");
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        autoplay: {
+          delay: 5000,
+        },
+      });
+      renderBullet: function (index, className) {
+        return '<span className="' + className + '">' + (index + 1) + '</span>';
       }
-      myIndex++;
-      if (myIndex > x.length) { myIndex = 1 }
-      x[myIndex - 1].style.display = "block";
-      setTimeout(carousel, 2000); // Change image every 2 seconds
-    }
-  </script>
+
+
+    </script>
+
+
+
+
+    <script>
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+      } function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+      } </script>
+
+    <script>
+      var myIndex = 0;
+      carousel();
+
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) { myIndex = 1 }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+      }
+    </script>
 
 
 
