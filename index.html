@@ -8,6 +8,11 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="intel.js">
   <link rel="stylesheet" href="images">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <title>Document</title>
 </head>
 
@@ -34,7 +39,8 @@
 
 
   <!--Главное слайд шоу-->
-  <div class="container">
+
+  <div class="container ">
     <a href="#"> <img class="mySlides" style="width:100% ; display: table-cell; vertical-align: top;"
         src="images/imsl.jpg"></a>
     <a href="#"><img class="mySlides" style="width:100% ; display: table-cell; vertical-align: top;"
@@ -43,7 +49,9 @@
         src="images/imsl3.jpg"></a>
 
   </div>
+  <div class="swiper-pagination"></div>
   <!-- Таблицаб нужно только ссылки-->
+
   <table class="w3-table w3-tiny w3-border w3-bordered w3-centered">
 
     <tr>
@@ -69,8 +77,8 @@
 
   <img style="width: 100%;" src="images/доставка.jpg" alt="">
 
-  <div class="w3-container w3-sand">
-    <h2 class="w3-center">WEEKLY BEST</h2>
+  <div>
+
 
   </div>
 
@@ -157,15 +165,12 @@
 
   <script>
     function w3_open() {
-      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById(" mySidebar").style.display = "block";
       document.getElementById("myOverlay").style.display = "block";
-    }
-
-    function w3_close() {
+    } function w3_close() {
       document.getElementById("mySidebar").style.display = "none";
       document.getElementById("myOverlay").style.display = "none";
-    }
-  </script>
+    } </script>
 
   <script>
     var myIndex = 0;
@@ -183,11 +188,6 @@
       setTimeout(carousel, 2000); // Change image every 2 seconds
     }
   </script>
-
-
-
-
-
 
 
 
