@@ -14,7 +14,7 @@
 <body>
 
 
-  <div class="w3-bar w3-mobile  w3-padding-16" style="background-color:#ffbcbce5 ;">
+  <div class="w3-container w3-mobile  w3-padding-16" style="background-color:#ffbcbce5 ;">
 
     <button class="w3-button  w3-xlarge w3-left  w3-padding-40 w3-display-top-left"
       style="color: hsl(0, 0%, 100%); background-color: #ffbcbce5;" onclick="w3_open()">☰</button>
@@ -25,7 +25,7 @@
 
   </div>
 
-  <div class="w3-sidebar w3-bar-block w3-border-right " style="display:none" id="mySidebar">
+  <div class="w3-sidebar w3-bar-block w3-border-right  " style="display:none; z-index:4" id="mySidebar">
     <button onclick="w3_close()" class="w3-bar-item w3-large ">Close &times;</button>
     <a href="#" class="w3-bar-item w3-button">Link 1</a>
     <a href="#" class="w3-bar-item w3-button">Link 2</a>
@@ -34,14 +34,38 @@
 
 
 
-
   <div class="container">
-    <a href="#"> <img class="mySlides" style="width: 100%;" src="images/imsl.jpg"></a>
-    <a href="#"><img class="mySlides" style="width: 100%;" src="images/imsl2.jpg"></a>
-    <a href="#"> <img class="mySlides" style="width: 100%;" src="images/imsl3.jpg"></a>
+    <a href="#"> <img class="mySlides" style="width:100% ; display: table-cell; vertical-align: top;"
+        src="images/imsl.jpg"></a>
+    <a href="#"><img class="mySlides" style="width:100% ; display: table-cell; vertical-align: top;"
+        src="images/imsl2.jpg"></a>
+    <a href="#"> <img class="mySlides" style="width:100% ; display: table-cell; vertical-align: top;"
+        src="images/imsl3.jpg"></a>
 
   </div>
+  <!-- Таблицаб нужно только ссылки-->
+  <table class="w3-table w3-tiny w3-border w3-bordered w3-centered">
 
+    <tr>
+      <td><a href="#"></a> BEST</td>
+      <td><a href="#"></a>NEW</td>
+      <td><a href="#"></a>TODAY DELIVERY(PM5)</td>
+      <td><a href="#"></a>TWO-PIECE SET</td>
+    </tr>
+    <tr>
+      <td><a href="#"></a>OUTER</td>
+      <td><a href="#"></a>KNIT CARDIGAN</td>
+      <td><a href="#"></a>SHIRT/BLOUSE</td>
+      <td><a href="#"></a>TOP</td>
+    </tr>
+    <tr>
+      <td><a href="#"></a>PANTS</td>
+      <td><a href="#"></a>SALE</td>
+      <td><a href="#"></a></td>
+      <td><a href="#"></a></td>
+    </tr>
+  </table>
+  </div>
 
 
 
