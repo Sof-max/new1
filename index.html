@@ -90,13 +90,16 @@
 
     </div>
     <!-- If we need pagination -->
+    <div class="swiper-pagination">
+    </div>
+
 
     <!-- If we need navigation buttons -->
 
 
     <!-- If we need scrollbar -->
 
-    <div class="swiper-slide" data-swiper-autoplay="2000">
+    <div class=" swiper-slide" data-swiper-autoplay="2000">
 
 
 
@@ -184,28 +187,35 @@
           setTimeout(carousel, 2000); // Change image every 2 seconds
         }
         //конец 1 -главного
-
+        var menu = ['PANTS', 'Slide 2', 'Slide 3']
         const swiper = new Swiper('.swiper-container', {
 
           loop: true,
 
           // If we need pagination
+
+
+          // If we need pagination
           pagination: {
             el: '.swiper-pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+              return '<span class="' + className + '">' + (menu[index]) + '</span>';
+            },
           },
+
 
           // Navigation arrows
 
-
           // And if we need scrollbar
-          scrollbar: {
-            el: '.swiper-scrollbar',
-          },
 
           autoplay: {
             delay: 5000,
             disableOnInteraction: true,
           },
+
+
+
 
         });
 
