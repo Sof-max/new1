@@ -8,3 +8,14 @@
   align-items: center;
   font-size: 60px;
 }
+
+.image-slider .swiper-pagination{
+   bottom: 0;
+}
+ .image-slider .swiper-pagination-bullet{
+width: 20px;
+height: 20px;
+line-height: 20px;
+font-size: 14px;
+background-color: #fff;
+}
