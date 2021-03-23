@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="intel.js">
+  <link rel="stylesheet" href="package.json">
   <link rel="stylesheet" href="images">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
-
+  <link type="text/javascript" scr="package.json">
 
 
 
@@ -81,25 +81,35 @@
 
   <!-- Slider main container -->
   <div class="swiper-container">
-    <!-- Additional required wrapper -->
-    <div class=" swiper-wrapper">
-      <!-- Slides -->
-      <div class="swiper-slide">Slide 1 </div>
+    <h3 class="w3-center">WEEKLY BEST</h3>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1</div>
       <div class="swiper-slide">Slide 2</div>
       <div class="swiper-slide">Slide 3</div>
-
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div>
+      <div class="swiper-slide">Slide 10</div>
+      <div class="swiper-slide">Slide 11</div>
+      <div class="swiper-slide">Slide 12</div>
+      <div class="swiper-slide">Slide 13</div>
+      <div class="swiper-slide">Slide 14</div>
+      <div class="swiper-slide">Slide 15</div>
+      <div class="swiper-slide">Slide 16</div>
+      <div class="swiper-slide">Slide 17</div>
+      <div class="swiper-slide">Slide 18</div>
     </div>
-    <!-- If we need pagination -->
-    <div class="swiper-pagination">
-    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
 
 
-    <!-- If we need navigation buttons -->
 
 
-    <!-- If we need scrollbar -->
 
-    <div class=" swiper-slide" data-swiper-autoplay="2000">
 
 
 
@@ -146,80 +156,47 @@
 
 
 
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script script src=" intel.js "> </script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 
+  <script>
+    //1 слайд шоу
+    var myIndex = 0;
+    carousel();
 
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) { myIndex = 1 }
+      x[myIndex - 1].style.display = "block";
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+    //конец 1 -главного
+  </script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 3,
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-      <script script src=" intel.js "> </script>
-
-      <script>
-        //1 слайд шоу
-        var myIndex = 0;
-        carousel();
-
-        function carousel() {
-          var i;
-          var x = document.getElementsByClassName("mySlides");
-          for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-          }
-          myIndex++;
-          if (myIndex > x.length) { myIndex = 1 }
-          x[myIndex - 1].style.display = "block";
-          setTimeout(carousel, 2000); // Change image every 2 seconds
-        }
-        //конец 1 -главного
-        var menu = ['PANTS', 'Slide 2', 'Slide 3']
-        const swiper = new Swiper('.swiper-container', {
-
-          loop: true,
-
-          // If we need pagination
-
-
-          // If we need pagination
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-            renderBullet: function (index, className) {
-              return '<span class="' + className + '">' + (menu[index]) + '</span>';
-            },
-          },
-
-
-          // Navigation arrows
-
-          // And if we need scrollbar
-
-          autoplay: {
-            delay: 5000,
-            disableOnInteraction: true,
-          },
-
-
-
-
-        });
-
-      </script>
+      spaceBetween: 30,
+      slidesPerGroup: 3,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
 
 
 
