@@ -38,3 +38,17 @@ body {
   align-items: center;
 }
 
+.image-in-slider{
+  height: 500px;
+}
+
+.image-in-slider__wrapper{
+
+}
+
+.image-in-slider__slide{
+  height: 450px;
+}
+.image-in-slider__image img{
+  max-width: 100%;
+}
