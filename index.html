@@ -84,49 +84,42 @@
   <div class="swiper-container">
     <h3 class="w3-center">WEEKLY BEST</h3>
     <div class="swiper-wrapper">
-      <div class="swiper-slide image-slider_slide">
-        <!--slide in sliders-->
-        <div class="image-in-slider swiper-container">
-          <div class="image-in-slider__wrapper swiper-wrapper">
-            <div class="image-in-slider__slide swiper-slide">
-              <div class="image-in-slider__image">
-                <img src="images/slider2/sl1.jpg" alt="image">
-              </div>
-            </div>
+      <div class="swiper-slide ">Slide 1</div>
+      <div class="swiper-slide" data-swiper-autoplay="2000">
+        <div class="swiper-container swiper-container-v">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">Vertical Slide 1</div>
+            <div class="swiper-slide">Vertical Slide 2</div>
+            <div class="swiper-slide">Vertical Slide 3</div>
+            <div class="swiper-slide">Vertical Slide 4</div>
+            <div class="swiper-slide">Vertical Slide 5</div>
           </div>
-          <div class="image-in-slider__wrapper swiper-wrapper">
-            <div class="image-in-slider__slide swiper-slide">
-              <div class="image-in-slider__image">
-                <img src="images/slider2/sl1(2).jpg" alt="image">
-              </div>
-            </div>
-
-
-          </div>
+          <div class="swiper-pagination swiper-pagination-v"></div>
         </div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-        <div class="swiper-slide">Slide 4</div>
-        <div class="swiper-slide">Slide 5</div>
-        <div class="swiper-slide">Slide 6</div>
-        <div class="swiper-slide">Slide 7</div>
-        <div class="swiper-slide">Slide 8</div>
-        <div class="swiper-slide">Slide 9</div>
-        <div class="swiper-slide">Slide 10</div>
-        <div class="swiper-slide">Slide 11</div>
-        <div class="swiper-slide">Slide 12</div>
-        <div class="swiper-slide">Slide 13</div>
-        <div class="swiper-slide">Slide 14</div>
-        <div class="swiper-slide">Slide 15</div>
-        <div class="swiper-slide">Slide 16</div>
-        <div class="swiper-slide">Slide 17</div>
-        <div class="swiper-slide">Slide 18</div>
       </div>
-      <!-- Add Pagination -->
-      <div class="swiper-pagination"></div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div>
+      <div class="swiper-slide">Slide 10</div>
+      <div class="swiper-slide">Slide 11</div>
+      <div class="swiper-slide">Slide 12</div>
+      <div class="swiper-slide">Slide 13</div>
+      <div class="swiper-slide">Slide 14</div>
+      <div class="swiper-slide">Slide 15</div>
+      <div class="swiper-slide">Slide 16</div>
+      <div class="swiper-slide">Slide 17</div>
+      <div class="swiper-slide">Slide 18</div>
     </div>
 
-    <div class="swiper-slide" data-swiper-autoplay="2000"></div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <div class="swiper-slide" data-swiper-autoplay="2000"></div>
 
 
 
@@ -176,61 +169,63 @@
 
 
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-    <script script src=" intel.js "> </script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script script src=" intel.js "> </script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 
-    <script>
-      //1 слайд шоу
-      var myIndex = 0;
-      carousel();
+  <script>
+    //1 слайд шоу
+    var myIndex = 0;
+    carousel();
 
-      function carousel() {
-        var i;
-        var x = document.getElementsByClassName("mySlides");
-        for (i = 0; i < x.length; i++) {
-          x[i].style.display = "none";
-        }
-        myIndex++;
-        if (myIndex > x.length) { myIndex = 1 }
-        x[myIndex - 1].style.display = "block";
-        setTimeout(carousel, 2000); // Change image every 2 seconds
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
       }
+      myIndex++;
+      if (myIndex > x.length) { myIndex = 1 }
+      x[myIndex - 1].style.display = "block";
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
     //конец 1 -главного
-    </script>
-    <script>
-      var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 3,
+  </script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 3,
 
-        spaceBetween: 30,
-        slidesPerGroup: 3,
-        loop: true,
-        loopFillGroupWithBlank: true,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      });
-    </script>
+      spaceBetween: 30,
+      slidesPerGroup: 3,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      // autoplay: {
+      // delay: 10000,
+      //disableOnInteraction: false,
+      // }
+    });
+  </script>
 
-    <script>
-      var swiper = new Swiper('.swiper-container-2', {
-        spaceBetween: 30,
-        effect: 'fade',
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        autoplay: {
-          delay: 5000
-        }
-      });
-    </script>
+  <script>
+    var swiperV = new Swiper('.swiper-container-v', {
+
+      spaceBetween: 50,
+
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      }
+    });
+  </script>
 
 
 
