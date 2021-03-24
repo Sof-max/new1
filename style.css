@@ -38,30 +38,13 @@ body {
   align-items: center;
 }
 
-.image-in-slider{
-  height: 500px;
-}
-
-.image-in-slider__wrapper{
- 
-}
-
-.image-in-slider__slide{
-  height: 450px;
-}
-.image-in-slider__image img{
-  max-width: 100%;
-}
-.swiper-wrapper {
-  transition-timing-function: linear;
-}
 
 .swiper-container-v {
   width: 100%;
   height: 100%;
 
 }
-.background-image{
-  background-size: cover;
-  height: 100%;
+.swiper-slide{
+ height:  100%;
+  width: 100%;
 }
