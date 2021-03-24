@@ -55,3 +55,9 @@ body {
 .swiper-wrapper {
   transition-timing-function: linear;
 }
+
+.swiper-container-v {
+  width: 100%;
+  height: 100%;
+
+}
