@@ -43,7 +43,7 @@ body {
 }
 
 .image-in-slider__wrapper{
-
+ 
 }
 
 .image-in-slider__slide{
@@ -51,4 +51,7 @@ body {
 }
 .image-in-slider__image img{
   max-width: 100%;
+}
+.swiper-wrapper {
+  transition-timing-function: linear;
 }
