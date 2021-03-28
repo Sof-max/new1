@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="images">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
   <link type="text/javascript" scr="package.json">
+  <link rel="stylesheet" href="style2.css">
 
 
 
@@ -78,28 +79,47 @@
 
   <img style="width: 100%;" src="images/доставка.jpg" alt="">
 
-  осв
+
 
   <!-- Slider main container -->
   <div class="swiper-container">
     <h3 class="w3-center">WEEKLY BEST</h3>
 
-    <div class="w3-bar ">
-      <button class="w3-bar-item w3-button" onclick="openCity('London')">London</button>
-      <button class="w3-bar-item w3-button" onclick="openCity('Paris')">Paris</button>
-      <button class="w3-bar-item w3-button" onclick="openCity('Tokyo')">Tokyo</button>
-    </div>
+    <nav class="main-nav">
+      <ul>
+        <li class="active"><a href="#One">One</a></li>
+        <li><a href="#Two">Two</a></li>
+        <li><a href="#Three">Three</a></li>
+        <li>
+          <a href="">
+            Four
+          </a>
+        </li>
+        <li>
+          <a href="">
+            Five
+          </a>
+        </li>
+      </ul>
+      <i class="active-marker"></i>
+    </nav>
+
     <!--1 слайдер-->
     <div class="swiper-wrapper">
-      <div class="swiper-slide" style="background-image: url(images/slider2/Гифка\ с\ Gifius.ru\ \(14\).gif);"></div>
+
+      <div id="One" class="swiper-slide" style="background-image: url(images/slider2/Гифка\ с\ Gifius.ru\ \(14\).gif);">
+      </div>
       <div class="swiper-slide " style="background-image: url(images/slider2/Гифка\ с\ Gifius.ru\ \(11\).gif);"></div>
       <div class="swiper-slide" style="background-image: url(images/slider2/Гифка\ с\ Gifius.ru\ \(12\).gif);"></div>
-      <div class="swiper-slide" style="background-image: url(images/slider2/Гифка\ с\ Gifius.ru\ \(13\).gif);"></div>
+
+      <div id="Two" class="swiper-slide" style="background-image: url(images/slider2/Гифка\ с\ Gifius.ru\ \(13\).gif);">
+      </div>
 
       <div class="swiper-slide" style="background-image: url(images/slider2/Гифка\ с\ Gifius.ru\ \(15\).gif);"></div>
       <div class="swiper-slide" style="background-image: url(images/slider2/Гифка\ с\ Gifius.ru\ \(16\).gif);"></div>
 
-      <div class="swiper-slide" style="background-image: url(images/slider2/Гифка\ с\ Gifius.ru\ \(10\).gif);"></div>
+      <div id="Three" class="swiper-slide"
+        style="background-image: url(images/slider2/Гифка\ с\ Gifius.ru\ \(10\).gif);"></div>
       <div class="swiper-slide" style="background-image: url(images/slider2/Гифка\ с\ Gifius.ru\ \(17\).gif);"></div>
       <div class="swiper-slide" style="background-image: url(images/slider2/Гифка\ с\ Gifius.ru\ \(18\).gif);"></div>
 
@@ -163,7 +183,7 @@
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-
+    <script src="package.js"></script>
     <script>
       //1 слайд шоу
       var myIndex = 0;
@@ -208,16 +228,8 @@
       });
     </script>
 
-    <script>
-      function openCity(cityName) {
-        var i;
-        var x = document.getElementsByClassName("city");
-        for (i = 0; i < x.length; i++) {
-          x[i].style.display = "none";
-        }
-        document.getElementById(cityName).style.display = "block";
-      }
-    </script>
+
+
 
 </body>
 
