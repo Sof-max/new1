@@ -1,3 +1,20 @@
+//слайдер
+var swiper = new Swiper('.slider1', {
+  slidesPerView: 3,
+
+  spaceBetween: 30,
+  slidesPerGroup: 3,
+  loop: true,
+  loopFillGroupWithBlank: true,
+
+
+  autoplay: {
+    delay: 7000,
+    disableOnInteraction: false,
+  }
+});
+
+
 $(document).ready(function () {
   function moveMarker() {
     var activeNav = $('.active a');
@@ -58,3 +75,11 @@ $(document).ready(function () {
     moveMarker();
   });
 });
+
+
+//slider2
+var swiper = new Swiper('.slider2', {
+  pagination: {
+    el: '.swiper-pagination',
+  },
+}); ы
