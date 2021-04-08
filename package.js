@@ -1,5 +1,5 @@
 //слайдер
-var swiper = new Swiper('.slider1', {
+var swiper = new Swiper('.swiper-container.swiper-two', {
   slidesPerView: 3,
 
   spaceBetween: 30,
@@ -11,7 +11,7 @@ var swiper = new Swiper('.slider1', {
   autoplay: {
     delay: 7000,
     disableOnInteraction: false,
-  }
+  },
 });
 
 
@@ -78,8 +78,17 @@ $(document).ready(function () {
 
 
 //slider2
-var swiper = new Swiper('.slider2', {
+var swiper = new Swiper('.swiper-container.swiper-one', {
   pagination: {
     el: '.swiper-pagination',
   },
-}); ы
+  
+  autoplay: {
+    delay: 7000,
+    disableOnInteraction: false,
+  },
+  
+});
+
+
+
